@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FindDoctors"
+    android:background="@color/home_background"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layoutheader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/colorTextIcons" />
+        <TextView
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Find Doctors"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="@dimen/_15ssp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:elevation="8dp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="80dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15ssp"
+            android:text="@string/search_text" />
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_15ssp"
+            android:src="@drawable/search_icon" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--healthconcern-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorTextIcons">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text="Search by health concern" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1"
+                            android:elevation="4dp">
+
+                            <ImageView
+                                android:id="@+id/fever"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Hair loss"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1">
+
+                            <ImageView
+                                android:id="@+id/cough"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/coughing" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Cold Cough"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1"
+                            android:elevation="4dp">
+
+                            <ImageView
+                                android:id="@+id/sorethroat"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/sorethroat" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Digestive"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1"
+                            android:elevation="4dp">
+
+                            <ImageView
+                                android:id="@+id/lossofsmell"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/loss_of_sense_of_smell" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Heart"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1"
+                            android:elevation="4dp">
+
+                            <ImageView
+                                android:id="@+id/breathingdifficulty"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/sneezing" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Bones joints"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1"
+                            android:elevation="4dp">
+
+                            <ImageView
+                                android:id="@+id/diarrhoea"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/diarrhoea" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Diarrhoea"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1">
+
+                            <ImageView
+                                android:id="@+id/redeye"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/redeye" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Eye Issues"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/card_1"
+                            android:elevation="4dp">
+
+                            <ImageView
+                                android:id="@+id/fatigue"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fatigue" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Fatigue"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--ENDS instant covid symptoms-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/colorTextIcons">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text="Search by speciality" />
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTextIcons">
+                    <RelativeLayout
+                        android:id="@+id/gridview1"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:id="@+id/speciality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Women's\nHealth "
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gridview2"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Diabetes"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTextIcons">
+                    <RelativeLayout
+                        android:id="@+id/gridview3"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Brain and\nNerves "
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gridview4"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Kidney\nIsuues "
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTextIcons">
+                    <RelativeLayout
+                        android:id="@+id/gridview5"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Ayurveda "
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gridview6"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="General\nPhysician "
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTextIcons">
+                    <RelativeLayout
+                        android:id="@+id/gridview7"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="General/nSurgery "
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gridview8"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Lungs and\nBreathing "
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTextIcons">
+                    <RelativeLayout
+                        android:id="@+id/gridview9"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Cancer "
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gridview10"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Mental\nWellness "
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTextIcons">
+                    <RelativeLayout
+                        android:id="@+id/gridview11"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Skin and\nHair"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gridview12"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:background="@color/home_background"
+                        android:padding="@dimen/_15sdp"
+                        android:gravity="center_vertical">
+                        <RelativeLayout
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:background="@drawable/card_1">
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/fever" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Dental\ncare "
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryText"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/lookformore"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Looking for more? Search"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:strokeColor="@color/colorPrimary"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
